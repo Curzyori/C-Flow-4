@@ -20,15 +20,14 @@ app.use((req, res, next) => {
     next();
 });
 
-// API Routes - Handle both with and without /api prefix
+// API Routes
 const apiRouter = express.Router();
-apiRouter.get('/test', (req, res) => res.json({ success: true, message: 'Backend is active v3' }));
+apiRouter.get('/test', (req, res) => res.json({ success: true, message: 'Backend is active v4' }));
 apiRouter.use('/status', statusRoutes);
 apiRouter.use('/streak', streakRoutes);
 apiRouter.use('/', musicRoutes);
 
 app.use('/api', apiRouter);
-apiRouter.use(apiRouter); // Fallback for direct matches
+app.use(apiRouter); 
 
-// Export for Vercel Serverless
 module.exports = app;

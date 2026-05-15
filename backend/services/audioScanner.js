@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const scanMusicLibrary = async () => {
-    // Using CDN for guaranteed stability on Vercel
+    // Using CDN for guaranteed stability on Vercel (v4)
     return [
         {
             id: 'love_me_not',

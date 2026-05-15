@@ -17,7 +17,7 @@
     },
     {
       "source": "/audio/(.*)",
-      "destination": "/audio/$1"
+      "destination": "/frontend/audio/$1"
     },
     {
       "source": "/(.*)",
