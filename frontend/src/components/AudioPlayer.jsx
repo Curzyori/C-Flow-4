@@ -25,8 +25,8 @@ const AudioPlayer = () => {
     useEffect(() => {
         const fetchInitialData = async () => {
             try {
-                // Fetch Tracks
-                const trackRes = await axios.get('/api/tracks');
+                // Fetch Tracks with cache buster
+                const trackRes = await axios.get(`/api/tracks?t=${Date.now()}`);
                 if (trackRes.data.success) {
                     setTracks(trackRes.data.tracks);
                     if (trackRes.data.tracks.length > 0) {
@@ -218,7 +218,7 @@ const AudioPlayer = () => {
                         <div className="flex items-center justify-between mb-6 px-2">
                             <h3 className="text-xl font-bold text-white flex items-center gap-2">
                                 <Volume2 className="text-curzy-neon" />
-                                C Flow Library v2
+                                C Flow Library v3
                             </h3>
                             <span className="text-white/40 text-sm">{tracks.length} Tracks</span>
                         </div>
@@ -264,7 +264,7 @@ const AudioPlayer = () => {
                             {tracks.length === 0 && (
                                 <div className="flex flex-col items-center justify-center h-40 text-white/20">
                                     <Music size={48} className="mb-2 opacity-50" />
-                                    <p>No tracks found in /music folder</p>
+                                    <p>No tracks found in /audio folder</p>
                                 </div>
                             )}
                         </div>

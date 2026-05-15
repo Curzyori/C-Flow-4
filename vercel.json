@@ -14,14 +14,6 @@
     {
       "source": "/api/(.*)",
       "destination": "backend/server.js"
-    },
-    {
-      "source": "/audio/(.*)",
-      "destination": "/frontend/audio/$1"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "frontend/$1"
     }
   ]
 }
