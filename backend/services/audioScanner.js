@@ -4,7 +4,7 @@ const path = require('path');
 
 const scanMusicLibrary = async () => {
     // Hardcoded tracks for Vercel stability
-    // These files are located in frontend/public/music/ and served at /music/
+    // Using /api/music/ for streaming from backend
     return [
         {
             id: 'love-me-not',
@@ -12,7 +12,7 @@ const scanMusicLibrary = async () => {
             title: 'Love Me Not',
             artist: 'Ravyn Lenae',
             duration: 218,
-            url: '/music/Love Me Not - Ravyn Lenae.mp3'
+            url: '/api/music/Love Me Not - Ravyn Lenae.mp3'
         },
         {
             id: 'to-the-bone',
@@ -20,7 +20,7 @@ const scanMusicLibrary = async () => {
             title: 'To The Bone',
             artist: 'Pamungkas',
             duration: 353,
-            url: '/music/To The Bone - Pamungkas.mp3'
+            url: '/api/music/To The Bone - Pamungkas.mp3'
         }
     ];
 };
