@@ -7,20 +7,20 @@ const scanMusicLibrary = async () => {
     // Using /api/music/ for streaming from backend
     return [
         {
-            id: 'love-me-not',
-            fileName: 'Love Me Not - Ravyn Lenae.mp3',
+            id: 'love_me_not',
+            fileName: 'love_me_not.mp3',
             title: 'Love Me Not',
             artist: 'Ravyn Lenae',
             duration: 218,
-            url: '/api/music/Love Me Not - Ravyn Lenae.mp3'
+            url: '/api/music/love_me_not.mp3'
         },
         {
-            id: 'to-the-bone',
-            fileName: 'To The Bone - Pamungkas.mp3',
+            id: 'to_the_bone',
+            fileName: 'to_the_bone.mp3',
             title: 'To The Bone',
             artist: 'Pamungkas',
             duration: 353,
-            url: '/api/music/To The Bone - Pamungkas.mp3'
+            url: '/api/music/to_the_bone.mp3'
         }
     ];
 };
